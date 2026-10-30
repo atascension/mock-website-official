@@ -1,0 +1,18 @@
+Image credits (Wikimedia Commons). Public domain / CC0 unless noted.
+file | source | author | license | page
+era-70s-pong.jpg | Computerspielemuseum-pong.jpg | Hanno Böck | CC0 | https://commons.wikimedia.org/wiki/File:Computerspielemuseum-pong.jpg
+era-80s-game-boy.jpg | Game-Boy-Original.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:Game-Boy-Original.jpg
+era-90s-snes.jpg | SNES-Mod1-Console-Set.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:SNES-Mod1-Console-Set.jpg
+era-2000s-ps2.jpg | PS2-Versions.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:PS2-Versions.jpg
+era-2010s-switch.jpg | Nintendo-Switch-Console-Docked-wJoyConRB.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:Nintendo-Switch-Console-Docked-wJoyConRB.jpg
+game-pac-man.jpg | PacManArcadeSanJuan.jpg | El Alternativo | CC0 | https://commons.wikimedia.org/wiki/File:PacManArcadeSanJuan.jpg
+game-nes-controller.jpg | NES-Controller-Flat.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:NES-Controller-Flat.jpg
+game-n64.jpg | Nintendo-64-wController-L.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:Nintendo-64-wController-L.jpg
+console-atari-2600.jpg | Atari-2600-Wood-4Sw-Set.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:Atari-2600-Wood-4Sw-Set.jpg
+console-nes.jpg | NES-Console-Set.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:NES-Console-Set.jpg
+console-genesis.jpg | Sega-Genesis-Mod1-Set.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:Sega-Genesis-Mod1-Set.jpg
+console-playstation.jpg | PSX-Console-wController.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:PSX-Console-wController.jpg
+memory-snes-in-hand.jpg | SNES-Controller-in-Hand.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:SNES-Controller-in-Hand.jpg
+hero-arcade.jpg | Takadanobaba Game Center Mikado ground floor 2019-02-24.jpg | Asanagi | CC0 | https://commons.wikimedia.org/wiki/File:Takadanobaba_Game_Center_Mikado_ground_floor_2019-02-24.jpg
+hero-n64-in-hand.jpg | N64-Controller-in-Hand.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:N64-Controller-in-Hand.jpg
+hero-game-boy-color.jpg | Nintendo-Game-Boy-Color-FL.jpg | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File:Nintendo-Game-Boy-Color-FL.jpg

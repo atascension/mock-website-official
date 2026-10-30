@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!--
+  SAVE POINT — landing page
+  "Save Point" is a working name. To rename the archive, update it in:
+    1. <title> and the meta description below
+    2. The header logo (.logo-text)
+    3. The hero supporting line and the "What You'll Find" intro
+    4. The footer logo and copyright line
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Save Point | Relive the Games and Consoles You Grew Up With</title>
+  <meta name="description" content="Save Point is a free, fan-built online archive of classic video games and consoles. Revisit the eras, games, and machines that shaped your childhood.">
+
+  <!-- Fonts: Pixelify Sans (headlines) + Nunito (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;1,400&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ============================================================
+       PIXEL SPRITE SHEET
+       Small 8-bit icons drawn with SVG rects. Reuse anywhere with:
+       <svg class="px-icon"><use href="#px-heart"></use></svg>
+       ============================================================ -->
+  <svg class="sprite-sheet" aria-hidden="true" focusable="false">
+    <symbol id="px-heart" viewBox="0 0 7 6">
+      <rect x="1" y="0" width="2" height="1"/><rect x="4" y="0" width="2" height="1"/>
+      <rect x="0" y="1" width="7" height="2"/>
+      <rect x="1" y="3" width="5" height="1"/>
+      <rect x="2" y="4" width="3" height="1"/>
+      <rect x="3" y="5" width="1" height="1"/>
+    </symbol>
+    <symbol id="px-star" viewBox="0 0 7 7">
+      <rect x="3" y="0" width="1" height="1"/>
+      <rect x="2" y="1" width="3" height="1"/>
+      <rect x="0" y="2" width="7" height="1"/>
+      <rect x="1" y="3" width="5" height="1"/>
+      <rect x="2" y="4" width="3" height="1"/>
+      <rect x="1" y="5" width="2" height="1"/><rect x="4" y="5" width="2" height="1"/>
+      <rect x="1" y="6" width="1" height="1"/><rect x="5" y="6" width="1" height="1"/>
+    </symbol>
+    <symbol id="px-arrow" viewBox="0 0 6 5">
+      <rect x="3" y="0" width="1" height="1"/>
+      <rect x="3" y="1" width="2" height="1"/>
+      <rect x="0" y="2" width="6" height="1"/>
+      <rect x="3" y="3" width="2" height="1"/>
+      <rect x="3" y="4" width="1" height="1"/>
+    </symbol>
+    <symbol id="px-controller" viewBox="0 0 11 6">
+      <rect x="1" y="0" width="9" height="1"/>
+      <rect x="0" y="1" width="2" height="1"/><rect x="3" y="1" width="8" height="1"/>
+      <rect x="0" y="2" width="1" height="1"/><rect x="4" y="2" width="3" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="10" y="2" width="1" height="1"/>
+      <rect x="0" y="3" width="2" height="1"/><rect x="3" y="3" width="8" height="1"/>
+      <rect x="0" y="4" width="11" height="1"/>
+      <rect x="0" y="5" width="3" height="1"/><rect x="8" y="5" width="3" height="1"/>
+    </symbol>
+    <symbol id="px-hourglass" viewBox="0 0 7 7">
+      <rect x="0" y="0" width="7" height="1"/>
+      <rect x="1" y="1" width="5" height="1"/>
+      <rect x="2" y="2" width="3" height="1"/>
+      <rect x="3" y="3" width="1" height="1"/>
+      <rect x="2" y="4" width="3" height="1"/>
+      <rect x="1" y="5" width="5" height="1"/>
+      <rect x="0" y="6" width="7" height="1"/>
+    </symbol>
+    <symbol id="px-tv" viewBox="0 0 10 8">
+      <rect x="2" y="0" width="1" height="1"/><rect x="7" y="0" width="1" height="1"/>
+      <rect x="3" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/>
+      <rect x="0" y="2" width="10" height="1"/>
+      <rect x="0" y="3" width="1" height="3"/><rect x="9" y="3" width="1" height="3"/>
+      <rect x="2" y="4" width="2" height="1"/>
+      <rect x="0" y="6" width="10" height="1"/>
+      <rect x="1" y="7" width="2" height="1"/><rect x="7" y="7" width="2" height="1"/>
+    </symbol>
+    <symbol id="px-bubble" viewBox="0 0 9 8">
+      <rect x="1" y="0" width="7" height="1"/>
+      <rect x="0" y="1" width="9" height="2"/>
+      <rect x="0" y="3" width="2" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="7" y="3" width="2" height="1"/>
+      <rect x="0" y="4" width="9" height="1"/>
+      <rect x="1" y="5" width="7" height="1"/>
+      <rect x="1" y="6" width="2" height="1"/>
+      <rect x="1" y="7" width="1" height="1"/>
+    </symbol>
+    <symbol id="px-plus" viewBox="0 0 9 9">
+      <rect x="0" y="0" width="9" height="1"/>
+      <rect x="0" y="1" width="1" height="7"/><rect x="8" y="1" width="1" height="7"/>
+      <rect x="4" y="2" width="1" height="5"/>
+      <rect x="2" y="4" width="5" height="1"/>
+      <rect x="0" y="8" width="9" height="1"/>
+    </symbol>
+    <symbol id="px-menu" viewBox="0 0 7 7">
+      <rect x="0" y="0" width="7" height="1"/>
+      <rect x="0" y="3" width="7" height="1"/>
+      <rect x="0" y="6" width="7" height="1"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="logo" href="#top" aria-label="Save Point, back to top">
+        <svg class="px-icon logo-icon" aria-hidden="true"><use href="#px-heart"></use></svg>
+        <span class="logo-text">Save Point</span>
+      </a>
+
+      <nav class="nav-menu" id="primary-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="#eras">Eras</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#consoles">Consoles</a></li>
+          <li><a href="#memories">Memories</a></li>
+          <li><a href="#suggest">Suggest</a></li>
+          <!-- Shown inside the menu on small screens only -->
+          <li class="nav-menu-cta">
+            <!-- TODO: replace # with the real archive URL -->
+            <a class="btn" href="#" data-cta="explore-archive">Explore the Archive</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- TODO: replace # with the real archive URL -->
+      <a class="btn btn-sm nav-cta" href="#" data-cta="explore-archive">Explore the Archive</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <svg class="px-icon" aria-hidden="true"><use href="#px-menu"></use></svg>
+        <span>Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         1. TOP BANNER (HERO)
+         ============================================================ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="eyebrow">
+          <svg class="px-icon" aria-hidden="true"><use href="#px-controller"></use></svg>
+          Player 1, welcome back
+        </p>
+        <h1 class="hero-title" id="hero-title">
+          Relive the games and consoles that shaped your childhood,<span class="sr-only"> all in one place.</span>
+          <span class="hero-title-rotator"><span class="typewriter" aria-hidden="true" data-typewriter>all in one place.</span><span class="cursor" aria-hidden="true"></span></span>
+        </h1>
+        <p class="hero-lead">
+          Save Point is a free, fan-built archive of gaming history. Pull up a beanbag and let us show you around.
+        </p>
+        <!-- TODO: replace # with the real archive URL -->
+        <a class="btn btn-lg" href="#" data-cta="explore-archive">
+          Explore the Archive
+          <svg class="px-icon btn-arrow" aria-hidden="true"><use href="#px-arrow"></use></svg>
+        </a>
+      </div>
+
+      <!-- Hero photo strip. Swap in your own images here (keep width/height to avoid layout shift). -->
+      <div class="container hero-strip">
+        <figure class="frame hero-photo hero-photo--left">
+          <img src="img/photos/hero-n64-in-hand.jpg" width="960" height="792"
+               alt="A hand holding a gray Nintendo 64 controller by its center grip">
+        </figure>
+        <figure class="frame hero-photo hero-photo--center">
+          <img src="img/photos/hero-arcade.jpg" width="960" height="720"
+               alt="Players sitting at a long row of glowing arcade cabinets in a Tokyo game center">
+        </figure>
+        <figure class="frame hero-photo hero-photo--right">
+          <img src="img/photos/hero-game-boy-color.jpg" width="960" height="1306"
+               alt="A Game Boy Color handheld console in bright purple">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. TIMELINE OF GAMING ERAS (tabbed showcase)
+         ============================================================ -->
+    <section class="section section--alt" id="eras" aria-labelledby="eras-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <p class="eyebrow">Level 1: The Eras</p>
+          <h2 id="eras-title">See how gaming grew up</h2>
+          <p class="lead">From simple arcade machines to the worlds we play in today. Pick an era and take a look around.</p>
+        </header>
+
+        <div class="tabs" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="Gaming eras">
+            <button class="tab" type="button" role="tab" id="tab-70s" aria-controls="panel-70s" aria-selected="true">70s Arcade</button>
+            <button class="tab" type="button" role="tab" id="tab-80s" aria-controls="panel-80s" aria-selected="false" tabindex="-1">80s 8-Bit</button>
+            <button class="tab" type="button" role="tab" id="tab-90s" aria-controls="panel-90s" aria-selected="false" tabindex="-1">90s 16-Bit &amp; 3D</button>
+            <button class="tab" type="button" role="tab" id="tab-2000s" aria-controls="panel-2000s" aria-selected="false" tabindex="-1">2000s</button>
+            <button class="tab" type="button" role="tab" id="tab-2010s" aria-controls="panel-2010s" aria-selected="false" tabindex="-1">2010s &amp; Beyond</button>
+          </div>
+
+          <!-- Era panels. Swap in your own images here. -->
+          <div class="tab-panel" role="tabpanel" id="panel-70s" aria-labelledby="tab-70s" tabindex="0">
+            <figure class="frame era-figure">
+              <img class="img-cover" style="object-position: 60% 55%" src="img/photos/era-70s-pong.jpg" width="1280" height="1707" loading="lazy"
+                   alt="An original wood-paneled Pong arcade cabinet with a yellow front on display in a museum">
+            </figure>
+            <div class="era-card">
+              <p class="chip">1972 to 1979</p>
+              <h3>The arcade is born</h3>
+              <p>It started with two paddles and a square ball. Pong cabinets popped up in bars and bowling alleys, and by the end of the decade kids were lining up quarters on the glass to call "next" on Space Invaders.</p>
+              <ul class="era-list">
+                <li>Pong (1972)</li>
+                <li>Breakout (1976)</li>
+                <li>Space Invaders (1978)</li>
+                <li>Asteroids (1979)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-80s" aria-labelledby="tab-80s" tabindex="0" hidden>
+            <figure class="frame era-figure">
+              <img class="img-contain" src="img/photos/era-80s-game-boy.jpg" width="960" height="1536" loading="lazy"
+                   alt="The original gray Nintendo Game Boy handheld with its green screen and red buttons">
+            </figure>
+            <div class="era-card">
+              <p class="chip">1980 to 1989</p>
+              <h3>8-bit comes home</h3>
+              <p>The '80s brought the arcade into the living room. After the crash of 1983, the NES got home consoles going again, and in 1989 the Game Boy put a whole world in your pocket, four AA batteries at a time.</p>
+              <ul class="era-list">
+                <li>Pac-Man (1980)</li>
+                <li>Donkey Kong (1981)</li>
+                <li>Super Mario Bros. (1985)</li>
+                <li>Tetris on Game Boy (1989)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-90s" aria-labelledby="tab-90s" tabindex="0" hidden>
+            <figure class="frame era-figure">
+              <img class="img-contain" src="img/photos/era-90s-snes.jpg" width="1280" height="664" loading="lazy"
+                   alt="A Super Nintendo console with its gray controller beside it">
+            </figure>
+            <div class="era-card">
+              <p class="chip">1990 to 1999</p>
+              <h3>16-bit color, then a whole new dimension</h3>
+              <p>Two big leaps in one decade. 16-bit consoles gave us bold color and soundtracks we still hum, then polygons showed up and games stepped into 3D on the PlayStation and Nintendo 64.</p>
+              <ul class="era-list">
+                <li>Street Fighter II (1991)</li>
+                <li>Sonic the Hedgehog 2 (1992)</li>
+                <li>Super Mario 64 (1996)</li>
+                <li>Final Fantasy VII (1997)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-2000s" aria-labelledby="tab-2000s" tabindex="0" hidden>
+            <figure class="frame era-figure">
+              <img class="img-contain" src="img/photos/era-2000s-ps2.jpg" width="1280" height="1134" loading="lazy"
+                   alt="The original black PlayStation 2 standing next to the later slim model">
+            </figure>
+            <div class="era-card">
+              <p class="chip">2000 to 2009</p>
+              <h3>Sleepovers, memory cards, and going online</h3>
+              <p>Memory cards packed with save files, first steps into online play, and some of the best-selling consoles ever made. The PlayStation 2, Xbox, and GameCube made sleepovers legendary, and the Wii got the whole family off the couch.</p>
+              <ul class="era-list">
+                <li>Halo: Combat Evolved (2001)</li>
+                <li>GTA: San Andreas (2004)</li>
+                <li>Guitar Hero (2005)</li>
+                <li>Wii Sports (2006)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-2010s" aria-labelledby="tab-2010s" tabindex="0" hidden>
+            <figure class="frame era-figure">
+              <img class="img-contain" src="img/photos/era-2010s-switch.jpg" width="1280" height="731" loading="lazy"
+                   alt="A Nintendo Switch sitting in its dock with red and blue Joy-Con controllers">
+            </figure>
+            <div class="era-card">
+              <p class="chip">2010 and beyond</p>
+              <h3>Huge worlds, everywhere you go</h3>
+              <p>Worlds got enormous and games went everywhere. Small indie hits sat right next to blockbusters, and you could start a save on the TV and finish it on the bus.</p>
+              <ul class="era-list">
+                <li>Minecraft (2011)</li>
+                <li>The Witcher 3 (2015)</li>
+                <li>Stardew Valley (2016)</li>
+                <li>Breath of the Wild (2017)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. FEATURED CLASSIC GAMES (row of three cards)
+         ============================================================ -->
+    <section class="section" id="games" aria-labelledby="games-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <p class="eyebrow">Level 2: Classic Games</p>
+          <h2 id="games-title">Rediscover the legends everyone remembers</h2>
+          <p class="lead">Three classics that started a million living-room arguments about whose turn it was.</p>
+        </header>
+
+        <!-- Game cards. Swap in your own images here. -->
+        <ul class="game-grid" role="list">
+          <li class="card game-card">
+            <figure class="game-figure">
+              <img class="img-cover" style="object-position: 50% 30%" src="img/photos/game-pac-man.jpg" width="960" height="1393" loading="lazy"
+                   alt="A yellow Pac-Man arcade cabinet covered in pixel art">
+            </figure>
+            <div class="game-body">
+              <p class="game-meta"><span class="chip">1980</span><span class="chip chip--outline">Arcade</span></p>
+              <h3>Pac-Man</h3>
+              <p>Every kid had a secret plan for dodging the ghosts, and every plan fell apart by level five.</p>
+            </div>
+          </li>
+          <li class="card game-card">
+            <figure class="game-figure game-figure--light">
+              <img class="img-contain" src="img/photos/game-nes-controller.jpg" width="960" height="482" loading="lazy"
+                   alt="A rectangular gray NES controller with a black D-pad and red A and B buttons">
+            </figure>
+            <div class="game-body">
+              <p class="game-meta"><span class="chip">1985</span><span class="chip chip--outline">NES</span></p>
+              <h3>Super Mario Bros.</h3>
+              <p>Plenty of us learned what a warp pipe was before we could spell "warp."</p>
+            </div>
+          </li>
+          <li class="card game-card">
+            <figure class="game-figure game-figure--light">
+              <img class="img-contain" src="img/photos/game-n64.jpg" width="960" height="439" loading="lazy"
+                   alt="A Nintendo 64 console with its three-pronged gray controller">
+            </figure>
+            <div class="game-body">
+              <p class="game-meta"><span class="chip">1998</span><span class="chip chip--outline">Nintendo 64</span></p>
+              <h3>The Legend of Zelda: Ocarina of Time</h3>
+              <p>The first time you stepped out onto Hyrule Field, the whole world seemed to open up in front of you.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. FEATURED CONSOLES (alternating image-left / image-right)
+         ============================================================ -->
+    <section class="section section--alt" id="consoles" aria-labelledby="consoles-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <p class="eyebrow">Level 3: The Consoles</p>
+          <h2 id="consoles-title">Meet the machines that brought those games home</h2>
+          <p class="lead">The consoles that moved gaming out of the arcade and into our living rooms.</p>
+        </header>
+
+        <!-- Console cards. Swap in your own images here.
+             TODO: point each "story" link at its page in the real archive. -->
+        <div class="console-list">
+          <article class="card console-card">
+            <figure class="console-figure">
+              <img class="img-contain" src="img/photos/console-atari-2600.jpg" width="1280" height="747" loading="lazy"
+                   alt="A wood-grain Atari 2600 console with a black joystick">
+            </figure>
+            <div class="console-body">
+              <p class="chip"><svg class="px-icon" aria-hidden="true"><use href="#px-star"></use></svg>Released 1977</p>
+              <h3>Atari 2600</h3>
+              <p>The wood-paneled box that started it all at home. Swappable cartridges meant one console could hold a whole shelf of adventures, and a single joystick button was all you needed.</p>
+              <a class="text-link" href="#">Read the Atari 2600 story<svg class="px-icon" aria-hidden="true"><use href="#px-arrow"></use></svg></a>
+            </div>
+          </article>
+
+          <article class="card console-card">
+            <figure class="console-figure">
+              <img class="img-contain" src="img/photos/console-nes.jpg" width="1280" height="695" loading="lazy"
+                   alt="A gray Nintendo Entertainment System console with two rectangular controllers">
+            </figure>
+            <div class="console-body">
+              <p class="chip"><svg class="px-icon" aria-hidden="true"><use href="#px-star"></use></svg>Released 1985</p>
+              <h3>Nintendo Entertainment System</h3>
+              <p>The gray box with the front-loading slot brought home gaming back to life. Blowing into the cartridge probably didn't help, but everyone did it anyway.</p>
+              <a class="text-link" href="#">Read the NES story<svg class="px-icon" aria-hidden="true"><use href="#px-arrow"></use></svg></a>
+            </div>
+          </article>
+
+          <article class="card console-card">
+            <figure class="console-figure">
+              <img class="img-contain" src="img/photos/console-genesis.jpg" width="1280" height="552" loading="lazy"
+                   alt="A black Sega Genesis console with its three-button controller">
+            </figure>
+            <div class="console-body">
+              <p class="chip"><svg class="px-icon" aria-hidden="true"><use href="#px-star"></use></svg>Released 1989</p>
+              <h3>Sega Genesis</h3>
+              <p>A speedy blue hedgehog and the loudest playground debates of the early '90s. The Genesis made gaming feel fast, loud, and just a little rebellious.</p>
+              <a class="text-link" href="#">Read the Genesis story<svg class="px-icon" aria-hidden="true"><use href="#px-arrow"></use></svg></a>
+            </div>
+          </article>
+
+          <article class="card console-card">
+            <figure class="console-figure">
+              <img class="img-contain" src="img/photos/console-playstation.jpg" width="1280" height="587" loading="lazy"
+                   alt="The original gray Sony PlayStation with its controller">
+            </figure>
+            <div class="console-body">
+              <p class="chip"><svg class="px-icon" aria-hidden="true"><use href="#px-star"></use></svg>Released 1995</p>
+              <h3>PlayStation</h3>
+              <p>CDs instead of cartridges meant real soundtracks, full cutscenes, and memory cards guarded like treasure. It pulled a lot of teenagers and grown-ups into gaming for good.</p>
+              <a class="text-link" href="#">Read the PlayStation story<svg class="px-icon" aria-hidden="true"><use href="#px-arrow"></use></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. WHAT YOU'LL FIND IN THE ARCHIVE
+         ============================================================ -->
+    <section class="section" id="archive" aria-labelledby="archive-title">
+      <div class="container archive-layout">
+        <div class="archive-intro">
+          <p class="eyebrow">Level 4: The Archive</p>
+          <h2 id="archive-title">What you'll find in the archive</h2>
+          <p class="lead">Decades of games, consoles, and stories, organized so they're easy and fun to browse.</p>
+          <p>Save Point is a free online archive for looking back. Think of it like a museum you can wander at your own pace, with the games we loved and the stories behind them.</p>
+          <div class="callout">
+            <svg class="px-icon callout-icon" aria-hidden="true"><use href="#px-heart"></use></svg>
+            <p><strong>Just so you know:</strong> this is not a store. Nothing here is for sale. No ads, no carts, no checkout. It's a place for remembering.</p>
+          </div>
+        </div>
+
+        <ul class="feature-grid" role="list">
+          <li class="card feature-tile">
+            <svg class="px-icon feature-icon" aria-hidden="true"><use href="#px-hourglass"></use></svg>
+            <h3>Games by era</h3>
+            <p>Jump to any decade and wander through the games that defined it, from coin-op cabinets to open worlds.</p>
+          </li>
+          <li class="card feature-tile">
+            <svg class="px-icon feature-icon" aria-hidden="true"><use href="#px-tv"></use></svg>
+            <h3>Console histories</h3>
+            <p>The story behind every machine: when it launched, what made it special, and the games that made us want one.</p>
+          </li>
+          <li class="card feature-tile">
+            <svg class="px-icon feature-icon" aria-hidden="true"><use href="#px-bubble"></use></svg>
+            <h3>Fan memories</h3>
+            <p>Stories from real players about the games that kept them up long past bedtime.</p>
+          </li>
+          <li class="card feature-tile feature-tile--highlight">
+            <svg class="px-icon feature-icon" aria-hidden="true"><use href="#px-plus"></use></svg>
+            <h3>Built by the community</h3>
+            <p>The archive grows from fan suggestions. If a game or console is missing, tell us and we'll add it.</p>
+            <a class="text-link" href="#suggest">Suggest a game<svg class="px-icon" aria-hidden="true"><use href="#px-arrow"></use></svg></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. COMMUNITY MEMORIES & TESTIMONIALS (mixed-size grid)
+         Placeholder fan quotes and stat. Replace with real fan memories.
+         ============================================================ -->
+    <section class="section section--alt" id="memories" aria-labelledby="memories-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Level 5: Fan Memories</p>
+            <h2 id="memories-title">You're not the only one who remembers</h2>
+          </div>
+          <p class="lead">Fans share the moments these games gave them: late nights, borrowed controllers, and save files that felt like treasure.</p>
+        </header>
+
+        <div class="memory-grid">
+          <figure class="card memory-card memory-card--feature">
+            <!-- Swap in your own image here -->
+            <img class="img-cover memory-photo" src="img/photos/memory-snes-in-hand.jpg" width="960" height="691" loading="lazy"
+                 alt="Two hands holding a Super Nintendo controller, thumbs on the D-pad and buttons">
+            <div class="memory-body">
+              <div class="hearts" aria-hidden="true">
+                <svg class="px-icon"><use href="#px-heart"></use></svg><svg class="px-icon"><use href="#px-heart"></use></svg><svg class="px-icon"><use href="#px-heart"></use></svg>
+              </div>
+              <blockquote>
+                <p>"My brother and I shared one controller and one save file of Chrono Trigger the whole summer of '95. I still know every note of that soundtrack."</p>
+              </blockquote>
+              <figcaption>
+                <span class="memory-name">Danielle R.</span>
+                <span class="memory-fav">Favorite game: Chrono Trigger</span>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure class="card memory-card memory-card--wide">
+            <div class="hearts" aria-hidden="true">
+              <svg class="px-icon"><use href="#px-heart"></use></svg><svg class="px-icon"><use href="#px-heart"></use></svg><svg class="px-icon"><use href="#px-heart"></use></svg>
+            </div>
+            <blockquote>
+              <p>"I found the Atari 2600 page and texted my dad a picture. He called ten minutes later to tell me how he beat his cousin at Combat in 1979. We talked for an hour."</p>
+            </blockquote>
+            <figcaption>
+              <span class="memory-name">Marcus T.</span>
+              <span class="memory-fav">Favorite game: Combat</span>
+            </figcaption>
+          </figure>
+
+          <div class="card memory-card memory-card--stat">
+            <svg class="px-icon stat-icon" aria-hidden="true"><use href="#px-star"></use></svg>
+            <p class="stat-number">4,812</p>
+            <p class="stat-label">memories shared by fans so far</p>
+          </div>
+
+          <figure class="card memory-card">
+            <div class="hearts" aria-hidden="true">
+              <svg class="px-icon"><use href="#px-heart"></use></svg><svg class="px-icon"><use href="#px-heart"></use></svg><svg class="px-icon"><use href="#px-heart"></use></svg>
+            </div>
+            <blockquote>
+              <p>"Seeing the old PlayStation memory card screen made me tear up a little. Twenty-some years later, I still remember which block held my Spyro save."</p>
+            </blockquote>
+            <figcaption>
+              <span class="memory-name">Priya K.</span>
+              <span class="memory-fav">Favorite game: Spyro the Dragon</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. FINAL CALL TO ACTION
+         ============================================================ -->
+    <section class="section final-cta" id="start" aria-labelledby="cta-title">
+      <div class="container final-cta-inner">
+        <div class="final-cta-sprites" aria-hidden="true">
+          <svg class="px-icon"><use href="#px-star"></use></svg>
+          <svg class="px-icon"><use href="#px-controller"></use></svg>
+          <svg class="px-icon"><use href="#px-heart"></use></svg>
+          <svg class="px-icon"><use href="#px-controller"></use></svg>
+          <svg class="px-icon"><use href="#px-star"></use></svg>
+        </div>
+        <p class="eyebrow">Final Level</p>
+        <h2 id="cta-title">Your trip down memory lane starts here.</h2>
+        <p class="lead">Pick an era, find your old favorites, and remember why you fell in love with games in the first place.</p>
+        <!-- TODO: replace # with the real archive URL -->
+        <a class="btn btn-lg" href="#" data-cta="explore-archive">
+          Explore the Archive
+          <svg class="px-icon btn-arrow" aria-hidden="true"><use href="#px-arrow"></use></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         8. SUGGEST A MISSING GAME OR CONSOLE
+         ============================================================ -->
+    <section class="section suggest" id="suggest" aria-labelledby="suggest-title">
+      <div class="container">
+        <div class="suggest-panel">
+          <div class="suggest-copy">
+            <p class="eyebrow">Bonus Stage</p>
+            <h2 id="suggest-title">Something missing? Tell us, and we'll add it.</h2>
+            <p>Save Point is built from fan feedback. If your favorite game or console isn't here yet, send it our way. Every suggestion gets read, and the archive grows because of them.</p>
+          </div>
+
+          <div class="suggest-form-wrap">
+            <!-- TODO: connect a real form service here (Formspree, Netlify Forms, Basin, etc.).
+                 Add action="..." and method="POST", then update the submit handler in script.js. -->
+            <form class="suggest-form" id="suggest-form" novalidate>
+              <div class="field">
+                <label for="suggest-name">Game or console name</label>
+                <input type="text" id="suggest-name" name="title" required autocomplete="off"
+                       aria-describedby="suggest-name-error">
+                <p class="field-error" id="suggest-name-error" hidden>Please tell us which game or console you'd like added.</p>
+              </div>
+              <div class="field">
+                <label for="suggest-note">A note about it <span class="optional">(optional)</span></label>
+                <textarea id="suggest-note" name="note" rows="3"></textarea>
+              </div>
+              <div class="field">
+                <label for="suggest-email">Your email <span class="optional">(optional)</span></label>
+                <input type="email" id="suggest-email" name="email" autocomplete="email"
+                       aria-describedby="suggest-email-help suggest-email-error">
+                <p class="field-help" id="suggest-email-help">Only if you'd like a heads-up when it's added. We never share it.</p>
+                <p class="field-error" id="suggest-email-error" hidden>That email doesn't look quite right. Check it, or leave it blank.</p>
+              </div>
+              <button class="btn" type="submit">
+                Send suggestion
+                <svg class="px-icon btn-arrow" aria-hidden="true"><use href="#px-arrow"></use></svg>
+              </button>
+            </form>
+
+            <!-- Thank-you message (filled in by script.js after submit) -->
+            <div class="suggest-thanks" id="suggest-thanks" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#top" aria-label="Save Point, back to top">
+          <svg class="px-icon logo-icon" aria-hidden="true"><use href="#px-heart"></use></svg>
+          <span class="logo-text">Save Point</span>
+        </a>
+        <p>A fan-built archive of gaming history.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#eras">Eras</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#consoles">Consoles</a></li>
+          <li><a href="#archive">The Archive</a></li>
+          <li><a href="#memories">Memories</a></li>
+          <li><a href="#suggest">Suggest a Game</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Save Point. Not a store. Nothing for sale.</p>
+      <p>Photos from <a href="img/photos/CREDITS.txt">Wikimedia Commons</a> (public domain and CC0).</p>
+    </div>
+  </footer>
+
+</body>
+</html>
